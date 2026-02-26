@@ -78,25 +78,21 @@ def _build_capabilities() -> List[Dict[str, Any]]:
             },
         },
         {
+            "browserName": "Firefox",
+            "browserVersion": "latest",
+            "bstack:options": {
+                **base_bstack_options,
+                "os": "Windows",
+                "osVersion": "11",
+            },
+        },
+        {
             "browserName": "Chrome",
             "browserVersion": "latest",
             "bstack:options": {
                 **base_bstack_options,
-                "deviceName": "Samsung Galaxy S23",
-                "osVersion": "13.0",
-                "platformName": "android",
-                "realMobile": True,
-            },
-        },
-        {
-            "browserName": "Safari",
-            "browserVersion": "latest",
-            "bstack:options": {
-                **base_bstack_options,
-                "deviceName": "iPhone 15",
-                "osVersion": "17",
-                "platformName": "ios",
-                "realMobile": True,
+                "os": "OS X",
+                "osVersion": "Sonoma",
             },
         },
     ]
